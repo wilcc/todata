@@ -1,5 +1,12 @@
 # Todata
 
+### Goal
+
+We'll be building [this SO FANCY todo app](https://todata-solution.surge.sh/).
+
+
+### What Does That Entail?
+
 Using the back end we've built, let's implement the following features on the FRONT END:
 
 * Show priorities in addition to text.
@@ -9,6 +16,18 @@ Using the back end we've built, let's implement the following features on the FR
 * Move high priority items to the top.
 
 For those last two, we'll ALSO have to finish the sorting portion of our back end. Run `npm test` when you're ready to do a little back-end work!
+
+
+### It Doesn't Entail Everything, Though!
+
+We highly recommend you familiarize yourself with the code we've got before you get started. There's a lot already there, so don't spend time writing code that already exists!
+
+
+### Some Problems You'll Have To Solve
+
+* How can we toggle the completeness of a todo by clicking on it?
+* How can we change the text of the buttons that are toggling? For example, when we click "Show Priorities", it changes to "Hide Priorities" so that we can toggle that feature back off.
+* How can we access the pulldown menu for adding priority to a todo?
 
 
 ### An Important Guideline:
