@@ -1,7 +1,4 @@
 const {
-  map,
-  filter,
-  twoPileSort,
   getTodoName,
   getCompleteness,
   getPriority,
@@ -15,7 +12,7 @@ const {
   priority1Only,
   priority2First,
   notCompleteFirst,
-} = require('./main.js')
+} = require('./back-end.js')
 
 const todos = require('./todos.js')
 
@@ -62,108 +59,6 @@ beforeEach(() => {
   
 ]
 })
-
-
-describe('map', () => {
-  it(`modifies each element of the given array by running it through the given function`, () => {
-    const greetings = ['hi', 'hello', 'how are you'];
-
-    const yell = function(greeting) {
-      return greeting + '!'
-    }
-
-    const fish = ['whale', 'dogfish', 'nurse'];
-    const sharks = ['whale shark', 'dogfish shark', 'nurse shark'];
-
-    const makeShark = function(fish) {
-      return `${fish} shark`;
-    }
-
-    expect(map(greetings, yell)).toEqual(['hi!', 'hello!', 'how are you!'])
-    expect(map(fish, makeShark)).toEqual(sharks)
-  })
-
-  it(`doesn't modify the original array`, () => {
-    const makeHighPriority = function(todo) {
-      return {...todo, priority: 2}
-    }
-
-    map(todos, makeHighPriority);
-    expect(todos).toEqual(originalTodos);
-  })
-})
-
-
-describe('filter', () => {
-  it(`returns a new array with only the elements of the given array that, when passed through the given function, return true`, () => {
-    const greetings = ['hi', 'hello', 'how are you'];
-    const fish = ['whale', 'dogfish', 'nurse'];
-
-    const isShort = function(greeting) {
-      return greeting.length < 6;
-    }
-    
-    const hasFishInName= function(fish) {
-      return fish.includes('fish')
-    }
-
-    expect(filter(greetings, isShort)).toEqual(['hi', 'hello'])
-    expect(filter(fish, hasFishInName)).toEqual(['dogfish'])
-  })
-
-  it(`doesn't modify the original array`, () => {
-    const nameIsShort = function(todo) {
-      return todo.text.length < 10
-    }
-
-    filter(todos, nameIsShort);
-    expect(todos).toEqual(originalTodos);
-  })
-})
-
-describe('twoPileSort', () => {
-  it(`returns a new array where elements from the given function that pass the given testing function are put at the beginning, while those who don't are put at the end`, () => {
-    const greetings = ['hi', 'how are you', 'hello', 'you are looking well today'];
-    const fish = ['whale', 'dogfish', 'starfish', 'manta ray', 'here fishy fishy fishy'];
-
-    const isShort = function(greeting) {
-      return greeting.length < 6;
-    }
-    
-    const hasFishInName = function(fish) {
-      return fish.includes('fish')
-    }
-
-    const shortGreetingsFirst = twoPileSort(greetings, isShort);
-    const firstLongGreetingIndex = shortGreetingsFirst.findIndex((greeting) => greeting.length >= 6)
-
-    const foundShortGreetingAfter = shortGreetingsFirst.slice(firstLongGreetingIndex)
-      .some((greeting) => greeting.length < 6)
-
-    expect(firstLongGreetingIndex).toBe(2);
-    expect(foundShortGreetingAfter).toBe(false);
-
-    const fishyFishFirst = twoPileSort(fish, hasFishInName);
-    const firstUnfishyFishIndex = fishyFishFirst.findIndex((fish) => !fish.includes('fish'))
-
-    const foundFishyFishAfter = fishyFishFirst.slice(firstUnfishyFishIndex)
-      .some((fish) => fish.includes('fish'))
-
-    expect(firstUnfishyFishIndex).toBe(3);
-    expect(foundFishyFishAfter).toBe(false);
-  })
-
-  it(`doesn't modify the original array`, () => {
-    const nameIsShort = function(todo) {
-      return todo.text.length < 10
-    }
-
-    twoPileSort(todos, nameIsShort);
-    expect(todos).toEqual(originalTodos);
-  })
-})
-
-
 
 describe('getTodoName', () => {
   it(`returns the text property of a todo`, () => {
