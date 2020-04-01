@@ -28,6 +28,7 @@ document.querySelector('.aplphabet').addEventListener('click', function(){
         alert('You really believe Im going to let you go?')
         alert('fOrGet IT!')
         alert('You ARE STUCK 4Ever and Ever')
+        alert('HAPPY APRIL FOOOOOOOLS')
     
 
     }
