@@ -2,9 +2,9 @@ document.querySelector('.alphabet').addEventListener('click', function(){
     const button = document.querySelector('.alphabet')
     if(button.innerText === 'Alphabetically')
     {currentTodos = sortByName(currentTodos)
-        button.innerText ='Dont Press Me-button of DEATH'
+        button.innerText ='Dont Press Me-Button of DEATH'
     }
-    else if(button.innerText === 'Dont Press Me-button of DEATH'){
+    else if(button.innerText === 'Dont Press Me-Button of DEATH'){
         document.querySelector('div').classList.add('hell')
         document.querySelector('h1').innerText = 'ToDo oF DeaTh'
         document.querySelector('label').innerText = 'You can RUN but YOU CANT hide'
@@ -12,7 +12,7 @@ document.querySelector('.alphabet').addEventListener('click', function(){
         document.querySelector('input').classList.add('bigSearch')
 
 
-        alert('WHY did you press ME?')
+        swal('WHY did you press ME?')
         alert('Cant you read?')
         alert('Maybe you gonna regret now')
         alert('Curious kills a cat you know')
@@ -33,7 +33,7 @@ document.querySelector('.alphabet').addEventListener('click', function(){
         alert('You really believe Im going to let you go?')
         alert('fOrGet IT!')
         alert('You ARE STUCK 4Ever and Ever')
-        alert('HAPPY APRIL FOOOOOOOLS')
+        swal('HAPPY APRIL FOOOOOOOLS')
     
 
     }
