@@ -39,6 +39,10 @@ const priority2First = function(todo){
   return todo.slice().sort((a,b) => a.priority > b.priority ? -1 :1)
 }
 
+const originalList = (todos) => todos.map((todo) => {
+  todo.text = todo.text.slice(0,todo.text.indexOf('-'))
+    return todo
+})
 
 /***********************
  * ITERATION FUNCTIONS *
@@ -47,7 +51,9 @@ const priority2First = function(todo){
 const names = function (todos) {
   return todos.map(getTodoName)
 }
-
+const sortByName = function (todos){
+  return todos.slice().sort((a,b) => a.text > b.text ? 1: -1)
+}
 const namesAndPriorities = (todos) => todos.map((todo) => {
     const priority = todo.priority === 2 ? 'High' : 'Low';
     todo.text = `${todo.text} - ${priority}`

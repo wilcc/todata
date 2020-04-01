@@ -1,7 +1,7 @@
 document.querySelector('.hide-complete').addEventListener('click', function(){
     const button = document.querySelector('.hide-complete')
     if(button.innerText === 'Hide Complete')
-    {currentTodos = justNotComplete([...todos])
+    {currentTodos = justNotComplete(currentTodos)
     button.innerText ='Show Complete'
     }
     else if(button.innerText === 'Show Complete'){
@@ -9,5 +9,5 @@ document.querySelector('.hide-complete').addEventListener('click', function(){
     button.innerText ='Hide Complete'
     }
     
-    refreshTodos(currentTodos)
+    refreshTodos()
 })

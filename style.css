@@ -1,3 +1,24 @@
 .complete {
   text-decoration: line-through;
 }
+.app{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+.todo-list{
+  font-size: 30px;
+  color:white;
+  background-color: silver;
+}
+.hell {
+  background-image: url(./img/images.png);
+  font-size: 100px;
+  color: maroon;
+  flex-direction: row;
+  text-decoration: line-through;
+
+}
