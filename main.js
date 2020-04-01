@@ -1,5 +1,5 @@
-document.querySelector('.aplphabet').addEventListener('click', function(){
-    const button = document.querySelector('.aplphabet')
+document.querySelector('.alphabet').addEventListener('click', function(){
+    const button = document.querySelector('.alphabet')
     if(button.innerText === 'Alphabetically')
     {currentTodos = sortByName(currentTodos)
         button.innerText ='Dont Press Me-button of DEATH'

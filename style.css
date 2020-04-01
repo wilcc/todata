@@ -8,7 +8,13 @@
   align-items: center;
   height: 100%;
 }
-
+.buuttoonn{
+  display: flex;
+  align-self: center;
+}
+.alphabet{
+  background-color: red;
+}
 .todo-list{
   font-size: 30px;
   color:white;
@@ -16,9 +22,10 @@
 }
 .hell {
   background-image: url(./img/images.png);
-  font-size: 100px;
+  font-size: 90px;
   color: maroon;
   flex-direction: row;
   text-decoration: line-through;
+  
 
 }
