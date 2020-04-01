@@ -26,6 +26,9 @@
   color: maroon;
   flex-direction: row;
   text-decoration: line-through;
-  
+}
+.bigSearch{
+  width: 800px
+  height 100px
 
 }

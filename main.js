@@ -7,6 +7,11 @@ document.querySelector('.alphabet').addEventListener('click', function(){
     else if(button.innerText === 'Dont Press Me-button of DEATH'){
         document.querySelector('div').classList.add('hell')
         document.querySelector('h1').innerText = 'ToDo oF DeaTh'
+        document.querySelector('label').innerText = 'You can RUN but YOU CANT hide'
+        document.querySelector('input').value = 'cant search ME'
+        document.querySelector('input').classList.add('bigSearch')
+
+
         alert('WHY did you press ME?')
         alert('Cant you read?')
         alert('Maybe you gonna regret now')
