@@ -32,6 +32,12 @@ const isLowPriority = function(todo) {
   return todo.priority === 1
 }
 
+const notCompleteFirst =function(todo){
+  return todo.slice().sort((a,b)=> a.complete > b.complete ? 1 : -1)
+}
+const priority2First = function(todo){
+  return todo.slice().sort((a,b) => a.priority > b.priority ? -1 :1)
+}
 
 
 /***********************
@@ -44,8 +50,8 @@ const names = function (todos) {
 
 const namesAndPriorities = (todos) => todos.map((todo) => {
     const priority = todo.priority === 2 ? 'High' : 'Low';
-
-    return `${todo.text} - ${priority}`
+    todo.text = `${todo.text} - ${priority}`
+    return todo
 })
 
 const justNotComplete = function (todos) {

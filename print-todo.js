@@ -1,4 +1,5 @@
 const printTodo = function(todo) {
+  
   // Use `document.createElement` to make an <li>
   const li = document.createElement('li');
   li.innerText = todo.text;
