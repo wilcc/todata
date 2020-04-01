@@ -21,7 +21,7 @@ document.querySelector('.alphabet').addEventListener('click', function(){
         alert('I have no idea')
         alert('Really depends on how bored I am')
         alert('let me see what time is it')
-        alert('1:18AM')
+        alert(myFunction())
         alert('Phew')
         alert('few more hours till class starts again')
         alert('maybe I should go to sleep')
@@ -40,3 +40,8 @@ document.querySelector('.alphabet').addEventListener('click', function(){
     
     refreshTodos()
 })
+function myFunction() {
+    let d = new Date();
+    let n = d.toLocaleTimeString();
+    return n;
+  }

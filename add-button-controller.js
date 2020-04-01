@@ -14,6 +14,7 @@ document.querySelector('.add-todo').addEventListener('click', function(){
     printTodo(newValue)
     const input = document.querySelector('.todo-input')
     input.value = ''
+    input.focus()
 
     
 })

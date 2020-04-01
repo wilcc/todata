@@ -1,12 +1,20 @@
 .complete {
   text-decoration: line-through;
 }
+body{
+  background-image: url(./img/1_QpaaSeJt-e0-0cFJVXOskQ.png);
+  background-size:cover;
+}
 .app{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   height: 100%;
+}
+.test{
+  background-image: url(./img/28960140-paper-write-to-do-list-word-on-wood-background.jpg);
+  background-size: auto;
 }
 .buuttoonn{
   display: flex;
