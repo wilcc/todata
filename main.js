@@ -1,7 +1,7 @@
 document.querySelector('.alphabet').addEventListener('click', function(){
     const button = document.querySelector('.alphabet')
     if(button.innerText === 'Alphabetically')
-    {currentTodos = sortByName(currentTodos)
+    {currentTodos = sortByName(...todos)
         button.innerText ='Dont Press Me-Button of DEATH'
     }
     else if(button.innerText === 'Dont Press Me-Button of DEATH'){
@@ -12,7 +12,7 @@ document.querySelector('.alphabet').addEventListener('click', function(){
         document.querySelector('input').classList.add('bigSearch')
 
 
-        swal('WHY did you press ME?')
+        alert('WHY did you press ME?')
         alert('Cant you read?')
         alert('Maybe you gonna regret now')
         alert('Curious kills a cat you know')
@@ -44,4 +44,4 @@ function myFunction() {
     let d = new Date();
     let n = d.toLocaleTimeString();
     return n;
-  }
+}
