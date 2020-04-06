@@ -3,7 +3,7 @@
 ### Welcome To Do List Beta
 
 ![](img/todo.png)
-
+You can visit 
 This is the basic you will be seeing when you first visit
 
 ### Functionality
